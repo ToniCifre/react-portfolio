@@ -12,6 +12,7 @@ import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import ButtonMenu from "./ButtonMenu";
 import ThemeSelector from "./ThemeSelector";
 import LanguageSelector from "./LanguageSelector";
+import CustomizedTabs from "./Tabs";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -70,17 +71,18 @@ export default function NavBar(props) {
                         {width < 630? <ButtonMenu translator={translator} switch_theme={switch_theme}/> : ''}
 
                         <Typography variant="h5" align={"center"} style={width < 630? {width: '100%'} : {}} className={classes.whiteColor} >Toni Cifre</Typography>
-
                         {width >= 630?
                             <div  className={classes.options}>
-                                <div style={{display: 'inline-flex'}}>
-                                    <Link to='/' className={classes.link}>
-                                        <Typography variant="h6" >{translator.resume}</Typography>
-                                    </Link>
-                                    <Link to='/github' className={classes.link}>
-                                        <Typography variant="h6" >{translator.repository}</Typography>
-                                    </Link>
-                                </div>
+                                <CustomizedTabs translator={translator}/>
+
+                                {/*<div style={{display: 'inline-flex'}}>*/}
+                                {/*    <Link to='/' className={classes.link}>*/}
+                                {/*        <Typography variant="h6" >{translator.resume}</Typography>*/}
+                                {/*    </Link>*/}
+                                {/*    <Link to='/github' className={classes.link}>*/}
+                                {/*        <Typography variant="h6" >{translator.repository}</Typography>*/}
+                                {/*    </Link>*/}
+                                {/*</div>*/}
                             </div>
 
                             : ''}

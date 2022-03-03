@@ -15,11 +15,14 @@ const GithubMainTop = ({repoList, translator})  => {
     const [gridd, setGridd] = useState(useRef(null));
 
     useEffect(() => {
-        if(gridd.current !== null){
-            setTimeout(function() {gridd.updateLayout();}.bind(this), 500)
+        if(gridd.current !== null && repoList !== null){
+            setTimeout(function() {gridd.updateLayout()}.bind(this), 100)
         }
-        if(gridd.current !== null){
-            setTimeout(function() {gridd.updateLayout();}.bind(this), 1000)
+        else if(gridd.current !== null){
+            gridd.updateLayout()
+        }
+        if(gridd.current !== null&& repoList !== null){
+            setTimeout(function() {gridd.updateLayout()}.bind(this), 1000)
         }
     }, [gridd, repoList]);
 
@@ -40,6 +43,29 @@ const GithubMainTop = ({repoList, translator})  => {
                     ))
                 }
             </StackGrid>
+
+
+                {/*{repoList ?*/}
+                {/*    <StackGrid columnWidth={345} style={{width:'100%', marginTop: 40}}*/}
+                {/*               gutterWidth={20} gutterHeight={20} gridRef={grid => setGridd(grid)}>*/}
+                {/*        {repoList.filter(data => top_list.includes(data.name)).map((data, key) => (*/}
+                {/*            <GithubMainTopCard key={key} data={data} translator={translator}/>*/}
+                {/*        ))}*/}
+                {/*    </StackGrid>*/}
+
+                {/*    :*/}
+
+                {/*    <div style={{marginBottom: 45, display:"flex", flexWrap:'wrap', justifyContent:'center'}}>*/}
+                {/*        {top_list.map((data, key) => (*/}
+                {/*            <div style={{margin: 10}}>*/}
+                {/*                <GithubMainTopCardSkeleton/>*/}
+                {/*            </div>*/}
+                {/*        ))}*/}
+                {/*    </div>*/}
+                {/*}*/}
+
+
+
 
         </Box>
     )

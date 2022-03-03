@@ -61,9 +61,17 @@ class GithubMainTable extends Component {
         if (!repoList) {
             return (
                 <Box border={1} borderColor="grey.300" boxShadow={2} borderRadius="20px" p={2} style={{marginTop: 25}}>
-                    <Typography variant="h2" component="h3" gutterBottom>
-                        <Skeleton/>
-                    </Typography>
+                    <Typography variant="h2"  gutterBottom><Skeleton/></Typography>
+                    <Typography variant="h3" gutterBottom><Skeleton/></Typography>
+                    <Typography variant="body1" component='p' ><Skeleton/></Typography>
+                    <Typography variant="body1" component='p' ><Skeleton/></Typography>
+                    <Typography variant="body1" component='p' ><Skeleton/></Typography>
+                    <Typography variant="body1" component='p' ><Skeleton/></Typography>
+                    <Typography variant="body1" component='p' ><Skeleton/></Typography>
+                    <Typography variant="body1" component='p' ><Skeleton/></Typography>
+                    <Typography variant="body1" component='p' ><Skeleton/></Typography>
+                    <Typography variant="body1" component='p' ><Skeleton/></Typography>
+                    <Typography variant="body1" component='p' ><Skeleton/></Typography>
                 </Box>
             )
         } else {

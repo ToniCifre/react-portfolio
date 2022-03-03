@@ -10,7 +10,7 @@ export const translations = {
       },
       "github": {
         "topRepo": "My Recent Work",
-        "allRepo": "All Repositories",
+        "allRepo": "Repository",
 
         "description": "Description",
         "languages": "Languages",
@@ -183,7 +183,7 @@ export const translations = {
       },
       "github": {
         "topRepo": "Trabajos Reciente",
-        "allRepo": "Todos los Respositorios",
+        "allRepo": "Repositorio",
 
         "description": "Descripción",
         "languages": "Lenguajes",
@@ -357,7 +357,7 @@ export const translations = {
       },
       "github": {
         "topRepo": "Treballs Recent",
-        "allRepo": "Tots els Respositorios",
+        "allRepo": "Repositori",
 
         "description": "Descripció",
         "languages": "Llenguatjes",
